@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "576268353884",
+    "firebase_url": "https://lojaapp-7fcc7.firebaseio.com",
+    "project_id": "lojaapp-7fcc7",
+    "storage_bucket": "lojaapp-7fcc7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:576268353884:android:73e483bf6a2493bc",
+        "android_client_info": {
+          "package_name": "com.souza.loja"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "576268353884-d47a4g8jlidhhlqrji0410864jievers.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.souza.loja",
+            "certificate_hash": "a014667529f014d6a2849b4d15ecdc202a5d7f02"
+          }
+        },
+        {
+          "client_id": "576268353884-e12f387su8ubddevki6vb37n7jqp9m19.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEQY82x7qG7XWCaf_CMbx70yPwYL2YE_Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "576268353884-e12f387su8ubddevki6vb37n7jqp9m19.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

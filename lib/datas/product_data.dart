@@ -1,5 +1,3 @@
-//Classe apenas para armazenar os dados do meu produto, nao tem necessidade do MaterialDart;
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class ProductData {
@@ -9,21 +7,27 @@ class ProductData {
 
   String title;
   String description;
+
   double price;
 
   List images;
   List sizes;
 
-  //Temos que pegar os documentos lá do firebase que vêm em snapshot e transformar esses dados
-  ProductData.fromDocument(DocumentSnapshot snapshot) {
+  ProductData.fromDocument(DocumentSnapshot snapshot){
     id = snapshot.documentID;
     title = snapshot.data["title"];
     description = snapshot.data["description"];
-    price = snapshot.data["price"];
+    price = snapshot.data["price"] + 0.0;
     images = snapshot.data["images"];
     sizes = snapshot.data["sizes"];
-
-    //Transformando os dados que vêm em snapshot para os dados dessa classe aqui;
-
   }
+
+  Map<String, dynamic> toResumedMap(){
+    return {
+      "title": title,
+      "description": description,
+      "price": price
+    };
+  }
+
 }

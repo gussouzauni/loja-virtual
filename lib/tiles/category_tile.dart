@@ -11,7 +11,6 @@ class CategoryTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      //Leading é o icone que fica a esquerda da lista
       leading: CircleAvatar(
         radius: 25.0,
         backgroundColor: Colors.transparent,
@@ -19,8 +18,7 @@ class CategoryTile extends StatelessWidget {
       ),
       title: Text(snapshot.data["title"]),
       trailing: Icon(Icons.keyboard_arrow_right),
-      onTap: () {
-        //Quando clicar em algum dos itens da lista, vai abrir a tela de categorias
+      onTap: (){
         Navigator.of(context).push(
           MaterialPageRoute(builder: (context)=>CategoryScreen(snapshot))
         );

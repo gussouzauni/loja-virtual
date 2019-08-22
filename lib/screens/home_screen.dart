@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:loja/tab/home_tab.dart';
 import 'package:loja/tab/products_tab.dart';
+import 'package:loja/tabs/orders_tab.dart';
+import 'package:loja/tabs/places_tab.dart';
+import 'package:loja/widgets/cart_button.dart';
 import 'package:loja/widgets/custom_drawer.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -9,16 +12,14 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return PageView(
       controller: _pageController,
-
-      //Não poder deslizar a tela com o dedo
       physics: NeverScrollableScrollPhysics(),
       children: <Widget>[
         Scaffold(
           body: HomeTab(),
           drawer: CustomDrawer(_pageController),
+          floatingActionButton: CartButton(),
         ),
         Scaffold(
           appBar: AppBar(
@@ -27,9 +28,24 @@ class HomeScreen extends StatelessWidget {
           ),
           drawer: CustomDrawer(_pageController),
           body: ProductsTab(),
-    ),
-        Container(color: Colors.yellow,),
-        Container(color: Colors.green,)
+          floatingActionButton: CartButton(),
+        ),
+        Scaffold(
+          appBar: AppBar(
+            title: Text("Lojas"),
+            centerTitle: true,
+          ),
+          body: PlacesTab(),
+          drawer: CustomDrawer(_pageController),
+        ),
+        Scaffold(
+          appBar: AppBar(
+            title: Text("Meus Pedidos"),
+            centerTitle: true,
+          ),
+          body: OrdersTab(),
+          drawer: CustomDrawer(_pageController),
+        )
       ],
     );
   }

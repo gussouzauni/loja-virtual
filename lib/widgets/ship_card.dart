@@ -7,7 +7,7 @@ class ShipCard extends StatelessWidget {
       margin: EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
       child: ExpansionTile(
         title: Text(
-          "Cálcular Frete",
+          "Calcular Frete",
           textAlign: TextAlign.start,
           style: TextStyle(
               fontWeight: FontWeight.w500,

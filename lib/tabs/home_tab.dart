@@ -21,9 +21,11 @@ class HomeTab extends StatelessWidget {
       ),
     );
 
+    //Colocar algo em cima da outra
     return Stack(
       children: <Widget>[
         _buildBodyBack(),
+        //App bar que passa por cima do conteúdo da tela, nao é uma APP bar fixa
         CustomScrollView(
           slivers: <Widget>[
             SliverAppBar(
@@ -41,6 +43,7 @@ class HomeTab extends StatelessWidget {
                 .collection("home").orderBy("pos").getDocuments(),
               builder: (context, snapshot){
                 if(!snapshot.hasData)
+                  //Como estou dentro de um sliver, nao posso colocar o progresso, entao tenho que adaptar um:
                   return SliverToBoxAdapter(
                     child: Container(
                       height: 200.0,

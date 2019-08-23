@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:loja/tab/home_tab.dart';
-import 'package:loja/tab/products_tab.dart';
+import 'package:loja/tabs/home_tab.dart';
 import 'package:loja/tabs/orders_tab.dart';
 import 'package:loja/tabs/places_tab.dart';
+import 'package:loja/tabs/products_tab.dart';
 import 'package:loja/widgets/cart_button.dart';
 import 'package:loja/widgets/custom_drawer.dart';
 

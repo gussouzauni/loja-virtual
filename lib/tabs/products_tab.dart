@@ -13,7 +13,7 @@ class ProductsTab extends StatelessWidget {
             child: CircularProgressIndicator(),
           );
         else {
-          //To dizendo como quero meu listView, passando os dados do meu list view
+          //To dizendo como quero meu ListView, passando os dados do meu List view
           var dividedTiles = ListTile
               .divideTiles(
                   tiles: snapshot.data.documents.map((doc) {
